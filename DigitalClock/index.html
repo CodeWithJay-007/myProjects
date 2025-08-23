@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../styles.css" />
+    <title>Your Local Time</title>
+    <style>
+                      body {
+          margin: 0;
+          font-family: 'Orbitron', sans-serif;
+          background: linear-gradient(-45deg, #1a1a1a, #333333, #1f1c2c, #928dab);
+          background-size: 400% 400%;
+          animation: gradientMove 12s ease infinite;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+        }
+
+        @keyframes gradientMove {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+
+        .center {
+          text-align: center;
+        }
+
+        h1 {
+          font-size: 50px;
+          margin-bottom: 20px;
+          letter-spacing: 3px;
+          text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.5);
+        }
+
+        #clock {
+          font-size: 65px;
+          font-weight: bold;
+          background: rgba(255, 165, 0, 0.1);
+          padding: 25px 70px;
+          border-radius: 20px;
+          box-shadow: 0 0 20px rgba(255, 165, 0, 0.6),
+                      0 0 50px rgba(255, 165, 0, 0.4);
+          color: #ffcc00;
+          text-shadow: 0 0 15px #ff9900, 0 0 30px #ff6600;
+          transition: transform 0.4s ease-in-out;
+        }
+
+        #clock:hover {
+          transform: scale(1.08);
+          box-shadow: 0 0 30px rgba(255, 200, 50, 0.8),
+                      0 0 60px rgba(255, 150, 0, 0.6);
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <div id="banner"><span>Your local time</span></div>
+      <div id="clock"></div>
+    </div>
+    <script src="DigClo.js"></script>
+  </body>
+</html>
